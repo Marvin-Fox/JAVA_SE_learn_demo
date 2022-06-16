@@ -10,18 +10,18 @@ import java.util.concurrent.Executors;
  * 小进行限制线程池的大小依赖于操作系统
  */
 public class Cached {
-	public static void main(String[] args){
-		ExecutorService ex = Executors.newCachedThreadPool();
-		for(int i=0; i<5; i++){
-			runnable rn = new runnable();
-			ex.execute(rn);
-		}
-		ex.shutdown();
-	}
+    public static void main(String[] args) {
+        ExecutorService ex = Executors.newCachedThreadPool();
+        for (int i = 0; i < 5; i++) {
+            runnable rn = new runnable();
+            ex.execute(rn);
+        }
+        ex.shutdown();
+    }
 }
 
-class runnable implements Runnable{
-	public void run(){
-		System.out.println(Thread.currentThread().getName());
-	}
+class runnable implements Runnable {
+    public void run() {
+        System.out.println(Thread.currentThread().getName());
+    }
 }

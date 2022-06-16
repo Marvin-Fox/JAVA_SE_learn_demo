@@ -8,7 +8,7 @@ package threads.demo3.synchronizeds;
  */
 public class Test {
 
-    public synchronized void method1(){
+    public synchronized void method1() {
         System.out.println("Method 1 start");
         try {
             System.out.println("Method 1 execute");
@@ -19,7 +19,7 @@ public class Test {
         System.out.println("Method 1 end");
     }
 
-    public synchronized void method2(){
+    public synchronized void method2() {
         System.out.println("Method 2 start");
         try {
             System.out.println("Method 2 execute");
@@ -30,7 +30,7 @@ public class Test {
         System.out.println("Method 2 end");
     }
 
-    public void method3(){
+    public void method3() {
         System.out.println("Method 3 start");
         try {
             System.out.println("Method 3 execute");
@@ -62,7 +62,6 @@ public class Test {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                // TODO Auto-generated method stub
                 test.method3();
             }
         }).start();
